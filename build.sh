@@ -109,6 +109,7 @@ done
 
 echo "$0: Running cmake $CMAKE_FLAGS"
 echo 
+CMAKE_FLAGS+=" -DCMAKE_CUDA_COMPILER=/usr/local/cuda/bin/nvcc -DCMAKE_CUDA_COMPILER_TOOLKIT_ROOT=/usr/local/cuda/"
 cmake $CMAKE_FLAGS ..
 
 os=$(uname)
